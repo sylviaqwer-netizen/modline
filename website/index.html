@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fafaf8">
+  <meta name="description" content="墨斗 Modline 是一个 AI 思考工作台。从问题、零散想法到连接、论证与表达，让每一步思考都由你来完成。探索产品演示与设计过程。">
+  <meta property="og:title" content="墨斗 Modline — From scattered thoughts to meaningful ideas.">
+  <meta property="og:description" content="从一个想法，到一个清晰观点。探索墨斗的五步思考流程与 AI 设计。">
+  <meta property="og:type" content="website">
+  <title>墨斗 Modline｜从想法到观点</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css?v=smooth-2">
+  <script src="./story-phase.js?v=smooth-2" defer></script>
+  <script src="./app.js?v=smooth-2" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="#overview" aria-label="墨斗 Modline 首页">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 24V8l11 11L27 8v16M5 8h22M16 19v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Modline<span class="brand-cn">墨斗</span></span>
+      </a>
+      <nav class="desktop-nav" aria-label="主导航">
+        <a href="#product">Product</a>
+        <a href="#process">Process</a>
+        <a href="#ai-design">AI Design</a>
+        <a href="https://github.com/sylviaqwer-netizen/modline" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+      </nav>
+      <div class="nav-actions">
+        <a class="button button-small" href="#demo">体验演示 <span aria-hidden="true">↗</span></a>
+        <button type="button" class="menu-toggle" aria-label="打开导航" aria-controls="mobile-nav" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="移动端导航" hidden>
+      <a href="#product">产品理念</a><a href="#process">思考流程</a><a href="#ai-design">AI 设计</a><a href="#evolution">设计演进</a><a href="https://github.com/sylviaqwer-netizen/modline" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section id="overview" class="hero" aria-labelledby="hero-title">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-copy content-width">
+        <div class="eyebrow hero-eyebrow"><span class="status-dot"></span> AI THINKING WORKSPACE</div>
+        <h1 id="hero-title">From scattered thoughts<br><span>to meaningful ideas.</span></h1>
+        <p class="hero-english">An AI thinking workspace for exploring, connecting<br class="desktop-break"> and challenging ideas before writing.</p>
+        <p class="hero-chinese">从一个想法，到一个清晰观点。</p>
+        <div class="hero-actions">
+          <a href="#demo" class="button">探索墨斗 <span class="button-arrow" aria-hidden="true">↗</span></a>
+          <a href="#product" class="text-link">看看它如何帮助思考 <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <a class="hero-scroll-cue" href="#demo"><span>向下滚动，让思路展开</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14m-5-5 5 5 5-5"/></svg></a>
+    </section>
+
+    <section id="demo" class="scroll-story" aria-labelledby="story-title">
+      <div class="story-sticky">
+      <div class="story-fit">
+      <div class="demo-area content-width">
+        <div class="story-heading"><div><span id="story-eyebrow" class="eyebrow">01 / QUESTION</span><h2 id="story-title">一个问题，就是思考的起点。</h2></div><p id="story-subtitle">先从你在意的事情开始。<br>不需要立刻给出答案。</p></div>
+        <div class="demo-caption"><span><span class="tiny-line" aria-hidden="true"></span> A LITTLE THOUGHT, IN MOTION</span><span>交互演示 · 示例数据</span></div>
+        <div class="workspace">
+          <div class="workspace-topbar">
+            <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+            <div class="workspace-title"><span class="workspace-icon" aria-hidden="true">◇</span> 年轻人比上一辈更幸福了吗？</div>
+            <span class="workspace-badge">DEMO</span>
+          </div>
+          <div class="workspace-tabs" role="tablist" aria-label="体验五步思考流程">
+            <button type="button" id="phase-tab-0" role="tab" aria-selected="true" aria-controls="demo-stage" tabindex="0" data-phase="0"><span>01</span> 问题</button>
+            <button type="button" id="phase-tab-1" role="tab" aria-selected="false" aria-controls="demo-stage" tabindex="-1" data-phase="1"><span>02</span> 想法</button>
+            <button type="button" id="phase-tab-2" role="tab" aria-selected="false" aria-controls="demo-stage" tabindex="-1" data-phase="2"><span>03</span> 连接</button>
+            <button type="button" id="phase-tab-3" role="tab" aria-selected="false" aria-controls="demo-stage" tabindex="-1" data-phase="3"><span>04</span> 论证</button>
+            <button type="button" id="phase-tab-4" role="tab" aria-selected="false" aria-controls="demo-stage" tabindex="-1" data-phase="4"><span>05</span> 表达</button>
+          </div>
+          <div id="demo-stage" class="demo-stage" role="tabpanel" aria-labelledby="phase-tab-0" tabindex="0"></div>
+          <div class="demo-controls">
+            <p id="stage-guidance"><span class="guidance-number">03</span><span>选中想法，看看它们之间藏着什么。</span></p>
+            <div class="phase-controls"><button type="button" id="phase-prev" aria-label="上一步">←</button><span id="phase-count">03 / 05</span><button type="button" id="phase-next" aria-label="下一步">→</button></div>
+          </div>
+        </div>
+        <div class="story-navigation"><span id="story-scroll-hint">点击步骤，按自己的节奏探索。</span><nav class="story-progress" aria-label="演示章节"><button type="button" aria-label="第一幕：问题" aria-current="step" data-story-phase="0"><span></span></button><button type="button" aria-label="第二幕：想法" data-story-phase="1"><span></span></button><button type="button" aria-label="第三幕：连接" data-story-phase="2"><span></span></button><button type="button" aria-label="第四幕：论证" data-story-phase="3"><span></span></button><button type="button" aria-label="第五幕：表达" data-story-phase="4"><span></span></button></nav><span id="story-progress-label">01 / 05</span></div>
+        <div class="demo-note"><span>可以滚动浏览，也可以点击、连接、检验。</span><span>本演示使用预设内容，不调用实时 AI。</span></div>
+        <noscript><p class="noscript-note">请启用 JavaScript 体验五步演示。墨斗的完整设计说明仍可继续浏览。</p></noscript>
+      </div>
+      </div>
+      </div>
+    </section>
+
+    <section id="product" class="why-section section content-width" aria-labelledby="why-title">
+      <div class="section-topline"><span class="eyebrow">01 / WHY MODLINE</span><span class="quiet-label">先有自己的观点，再找到表达。</span></div>
+      <div class="why-intro">
+        <h2 id="why-title">想法已经有了。<br>只是还没<span class="accent">连起来。</span></h2>
+        <div class="why-body"><p>面对一个问题，我们常常能说出感受、经历和片段，却还不知道它们能说明什么。</p><p>墨斗从这里开始：把想法放到眼前，发现联系，再追问一句。让模糊的感受，慢慢长成有依据的观点。</p><span class="small-label">DESIGN INTENT</span><p class="why-principle">让 AI 推动思考，让用户保留判断。</p></div>
+      </div>
+      <div class="before-after">
+        <div class="before-panel"><span class="small-label">起点 / SCATTERED THOUGHTS</span><div class="mini-thought thought-a">能选的职业方向更多了</div><div class="mini-thought thought-b">可是我更怕选错了</div><div class="mini-thought thought-c">选择多，真的更幸福吗？</div><span class="before-footnote">三个片段，还没有形成一个判断。</span></div>
+        <div class="transition-line" aria-hidden="true"><span>→</span></div>
+        <div class="after-panel"><span class="small-label">一步之后 / A MEANINGFUL CONNECTION</span><span class="relation-label"><span aria-hidden="true">⇄</span> 张力 · 机会与感受之间</span><blockquote>对我而言，职业方向变多<br>并没有直接让求职更轻松，<br>反而让我更担心选错。</blockquote><p>保留「对我而言」，也保留继续追问的空间。</p></div>
+      </div>
+    </section>
+
+    <section id="process" class="process-section section" aria-labelledby="process-title">
+      <div class="content-width">
+        <div class="section-topline"><span class="eyebrow">02 / HOW IT WORKS</span><span class="quiet-label">一条思路，五个逐渐清晰的时刻。</span></div>
+        <div class="section-heading"><h2 id="process-title">把思考，<br>展开成一个过程。</h2><p>每一步只处理眼前的一件事。<br>随时回到前面，让观点继续生长。</p></div>
+        <div class="journey">
+          <button type="button" class="journey-step" data-jump-phase="0"><span class="journey-number">01</span><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="13"/><path d="M16 16a4 4 0 1 1 7 3c-2 1-3 2-3 4M20 27v.1"/></svg><span class="journey-english">Question</span><h3>找一个问题</h3><p>从你在意的事开始，<br>给思考一个落点。</p><span class="journey-action">探索问题 ↗</span></button>
+          <button type="button" class="journey-step" data-jump-phase="1"><span class="journey-number">02</span><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="6" y="8" width="21" height="25" rx="3"/><path d="M14 5h17a3 3 0 0 1 3 3v19M12 16h9M12 22h7"/></svg><span class="journey-english">Thoughts</span><h3>倒出脑中想法</h3><p>经历、直觉、疑问，<br>先放下来，不急着整理。</p><span class="journey-action">捕捉想法 ↗</span></button>
+          <button type="button" class="journey-step featured" data-jump-phase="2"><span class="journey-number">03</span><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="9" cy="12" r="4"/><circle cx="31" cy="10" r="4"/><rect x="16" y="25" width="10" height="9" rx="2"/><path d="m12 15 6 10m11-12-6 12M13 12l14-2"/></svg><span class="journey-english">Connections</span><h3>发现想法之间的线</h3><p>比较、连接、综合，<br>把片段变成初步观点。</p><span class="journey-action">连接想法 ↗</span></button>
+          <button type="button" class="journey-step" data-jump-phase="3"><span class="journey-number">04</span><svg viewBox="0 0 40 40" aria-hidden="true"><rect x="15" y="15" width="10" height="10" rx="2"/><path d="M4 20h11m10 0h11M20 5v10m0 10v10M2 15v10m36-10v10"/></svg><span class="journey-english">Reasoning</span><h3>再问深一点</h3><p>为什么成立？有什么例外？<br>一次补上一条值得想的线。</p><span class="journey-action">检验论证 ↗</span></button>
+          <button type="button" class="journey-step" data-jump-phase="4"><span class="journey-number">05</span><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M9 7h22v26H9zM14 14h12M14 20h12M14 26h7"/></svg><span class="journey-english">Expression</span><h3>带走自己的结构</h3><p>整理观点与依据，<br>形成写作或口语提纲。</p><span class="journey-action">查看提纲 ↗</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="ai-design" class="ai-section section" aria-labelledby="ai-title">
+      <div class="content-width">
+        <div class="section-topline"><span class="eyebrow">03 / AI DESIGN</span><span class="quiet-label">设计原则与输出示意</span></div>
+        <div class="ai-layout">
+          <div class="ai-copy"><h2 id="ai-title">一次，只推动<br><span>一步思考。</span></h2><p class="ai-description">AI 的价值在于识别当前值得探索的关系，提出一个能继续想下去的问题。观点怎么形成、哪一步要往下走，由用户决定。</p>
+            <div class="ai-principles">
+              <div><span>01</span><div><h3>围绕当前上下文</h3><p>一起看问题、已有想法和当前选中的关系。</p></div></div>
+              <div><span>02</span><div><h3>给建议留出边界</h3><p>保留用户的语气、立场与适用范围；关系不明确时，继续追问。</p></div></div>
+              <div><span>03</span><div><h3>把判断权交回用户</h3><p>建议可以接受、修改或暂放。每次提示，都应该有具体的落点。</p></div></div>
+            </div>
+          </div>
+          <div class="ai-inspector">
+            <div class="inspector-header"><span class="inspector-light"></span><span>A CLOSER LOOK</span><span class="inspector-type">P3 / CONNECT</span></div>
+            <div class="inspector-tabs" role="tablist" aria-label="AI 设计说明"><button type="button" id="ai-tab-context" role="tab" aria-selected="true" aria-controls="ai-panel" tabindex="0" data-inspector="context">输入上下文</button><button type="button" id="ai-tab-boundary" role="tab" aria-selected="false" aria-controls="ai-panel" tabindex="-1" data-inspector="boundary">提示边界</button><button type="button" id="ai-tab-output" role="tab" aria-selected="false" aria-controls="ai-panel" tabindex="-1" data-inspector="output">输出示例</button></div>
+            <div id="ai-panel" class="inspector-panel" role="tabpanel" aria-labelledby="ai-tab-context" tabindex="0"></div>
+            <div class="inspector-footer"><span aria-hidden="true">↳</span> 在同一个上下文里，做一件具体的事。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="evolution" class="evolution-section section content-width" aria-labelledby="evolution-title">
+      <div class="section-topline"><span class="eyebrow">04 / DESIGN EVOLUTION</span><span class="quiet-label">让取舍，也成为作品的一部分。</span></div>
+      <div class="section-heading"><h2 id="evolution-title">每一条线，<br>都有设计的理由。</h2><p>从怎么放下想法，到怎么检验观点。<br>界面背后，是对思考过程的拆解。</p></div>
+      <div class="evolution-layout">
+        <div class="evolution-list" role="tablist" aria-label="查看三个设计取舍" aria-orientation="vertical">
+          <button type="button" id="evolution-tab-0" class="evolution-item active" role="tab" aria-selected="true" aria-controls="evolution-panel" tabindex="0" data-evolution="0"><span class="evolution-number">01</span><div><h3>从层级整理，到关系探索</h3><p>同一条想法，可以参与不止一种连接。</p></div><span class="evolution-plus" aria-hidden="true">↗</span></button>
+          <button type="button" id="evolution-tab-1" class="evolution-item" role="tab" aria-selected="false" aria-controls="evolution-panel" tabindex="-1" data-evolution="1"><span class="evolution-number">02</span><div><h3>从成堆建议，到一条可补的线</h3><p>把下一步缩小到用户现在能回答的问题。</p></div><span class="evolution-plus" aria-hidden="true">↗</span></button>
+          <button type="button" id="evolution-tab-2" class="evolution-item" role="tab" aria-selected="false" aria-controls="evolution-panel" tabindex="-1" data-evolution="2"><span class="evolution-number">03</span><div><h3>从自由布局，到稳定的论证视角</h3><p>WHY / FOCUS / SO WHAT，围绕当前观点展开。</p></div><span class="evolution-plus" aria-hidden="true">↗</span></button>
+        </div>
+        <div id="evolution-panel" class="evolution-panel" role="tabpanel" aria-labelledby="evolution-tab-0" tabindex="0"></div>
+      </div>
+    </section>
+
+    <section class="closing-section content-width" aria-labelledby="closing-title">
+      <div class="closing-line" aria-hidden="true"><span></span><i></i><span></span></div>
+      <span class="eyebrow">A THOUGHT IS A BEGINNING.</span>
+      <h2 id="closing-title">一念成线。</h2>
+      <p>给一个模糊的想法，留一点变清晰的空间。</p>
+      <a href="#demo" class="button">开始一段思考 <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
+
+  <nav class="chapter-nav" aria-label="页面章节"><a href="#overview" aria-label="首页" aria-current="location"><span></span><small>首页</small></a><a href="#demo" aria-label="产品演示"><span></span><small>演示</small></a><a href="#product" aria-label="产品理念"><span></span><small>理念</small></a><a href="#process" aria-label="思考流程"><span></span><small>流程</small></a><a href="#ai-design" aria-label="AI 设计"><span></span><small>AI 设计</small></a><a href="#evolution" aria-label="设计演进"><span></span><small>设计</small></a></nav>
+
+  <footer class="site-footer content-width">
+    <div class="footer-main"><div><a href="#overview" class="brand"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 24V8l11 11L27 8v16M5 8h22M16 19v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Modline<span class="brand-cn">墨斗</span></span></a><p>AI 思考工作台 · 独立产品设计与开发</p></div><div class="footer-about"><p>一个持续迭代的产品探索。<br>从问题定义、交互设计到网页原型，<br>探索 AI 如何支持用户形成自己的观点。</p><a href="https://github.com/sylviaqwer-netizen/modline" target="_blank" rel="noopener noreferrer">查看项目与留下反馈 <span aria-hidden="true">↗</span></a></div></div>
+    <div class="footer-bottom"><span>© 2026 Modline. 一念成线。</span><span>PRODUCT WEBSITE / MVP</span><a href="#overview">回到顶部 ↑</a></div>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

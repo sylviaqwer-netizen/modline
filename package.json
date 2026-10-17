@@ -1,0 +1,8 @@
+{
+  "name": "modline",
+  "private": true,
+  "scripts": {
+    "start": "npm start --prefix website",
+    "test": "npm test --prefix website"
+  }
+}
