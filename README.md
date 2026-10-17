@@ -6,6 +6,18 @@
 
 它不是一个替用户生成答案的写作工具，而是帮助用户完成从「碎片想法 → 观点形成 → 论证检验 → 结构化表达」的思考过程。
 
+## 官网预览
+
+产品官网在 [`website/`](website/)。演示使用预设案例，不连接实时 AI。
+
+```bash
+npm start
+```
+
+在仓库根目录或 `website/` 里都可以。不需要安装依赖。终端会给出本地地址，默认 http://127.0.0.1:4173 。也可以直接打开 `website/index.html`。
+
+`npm test` 会跑滚动相位的逻辑检查。交互细节见 [`website/README.md`](website/README.md)。
+
 ---
 
 ## ✦ Why Modline
